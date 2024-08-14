@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Python</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1, h2, h3 {
+            color: #00aaff;
+        }
+        pre code {
+            display: block;
+            background: #2d2d2d;
+            border: 1px solid #444;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #c5c5c5;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+        ul {
+            list-style-type: disc;
+        }
+        ol {
+            list-style-type: decimal;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+        a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background: #1e1e1e;
+            padding: 10px;
+            border-bottom: 2px solid #00aaff;
+        }
+        header h1 {
+            margin: 0;
+            color: #00aaff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introdução ao Python</h1>
+    </header>
+    <div class="container">
+        <h2>1. Instalação e Configuração</h2>
+        <p>Para começar a usar Python, siga os passos abaixo:</p>
+        <ol>
+            <li><strong>Download:</strong> Acesse o site oficial do Python (<a href="https://www.python.org/downloads/" target="_blank">python.org</a>) e baixe o instalador adequado para seu sistema operacional.</li>
+            <li><strong>Instalação:</strong> Execute o instalador e siga as instruções. Certifique-se de marcar a opção "Add Python to PATH" para facilitar o uso do Python a partir da linha de comando.</li>
+            <li><strong>Verificação:</strong> Após a instalação, abra o terminal (ou prompt de comando) e digite <code>python --version</code> para verificar se a instalação foi bem-sucedida. A versão do Python deve ser exibida.</li>
+        </ol>
+
+        <h2>2. Vantagens do Python</h2>
+        <ul>
+            <li><strong>Facilidade de Aprendizado:</strong> Python possui uma sintaxe clara e intuitiva, tornando-o ideal para iniciantes na programação.</li>
+            <li><strong>Versatilidade:</strong> É utilizado em diversas áreas, incluindo desenvolvimento web, análise de dados, automação, inteligência artificial e mais.</li>
+            <li><strong>Grande Comunidade:</strong> Possui uma vasta comunidade de desenvolvedores, o que resulta em abundante documentação, tutoriais e suporte.</li>
+            <li><strong>Bibliotecas e Frameworks:</strong> A vasta gama de bibliotecas e frameworks, como Django, Flask, Pandas e NumPy, expande as funcionalidades do Python para atender a diferentes necessidades.</li>
+        </ul>
+
+        <h2>3. Desvantagens do Python</h2>
+        <ul>
+            <li><strong>Desempenho:</strong> Por ser uma linguagem interpretada, o Python pode ser mais lento em comparação com linguagens compiladas como C++.</li>
+            <li><strong>Consumo de Memória:</strong> Pode consumir mais memória do que algumas linguagens de baixo nível, o que pode ser uma limitação em sistemas com recursos restritos.</li>
+            <li><strong>Desafios de Integração:</strong> A integração com sistemas de baixo nível ou hardware específico pode ser mais complexa em Python.</li>
+        </ul>
+
+        <h2>4. Aplicações do Python</h2>
+        <ul>
+            <li><strong>Desenvolvimento Web:</strong> Utilizando frameworks como Django e Flask para criar aplicações web escaláveis e robustas.</li>
+            <li><strong>Análise de Dados:</strong> Com bibliotecas como Pandas e NumPy para manipulação e análise de grandes volumes de dados.</li>
+            <li><strong>Automação:</strong> Scripts Python são frequentemente usados para automatizar tarefas repetitivas e processos do dia a dia.</li>
+            <li><strong>Desenvolvimento de Jogos:</strong> Usando a biblioteca Pygame para criar jogos 2D e outras aplicações interativas.</li>
+            <li><strong>Machine Learning:</strong> Bibliotecas como TensorFlow, Keras e scikit-learn são usadas para construir e treinar modelos de aprendizado de máquina.</li>
+        </ul>
+
+        <h2>5. Conceitos Básicos da Linguagem</h2>
+
+        <h3>5.1 Estrutura de um Programa</h3>
+        <p>Um programa Python é composto por blocos de código que incluem módulos, funções e classes. O código é executado sequencialmente, a menos que haja estruturas de controle que alterem o fluxo da execução.</p>
+        <p>Exemplo de um programa simples:</p>
+        <pre><code>print("Olá, Mundo!")</code></pre>
+
+        <h3>5.2 Variáveis e seus Tipos</h3>
+        <p>Variáveis em Python são usadas para armazenar dados e podem conter diferentes tipos de valores:</p>
+        <ul>
+            <li><strong>Inteiros:</strong> Representam números sem parte decimal.</li>
+            <li><strong>Floats:</strong> Representam números com parte decimal.</li>
+            <li><strong>Strings:</strong> Sequências de caracteres usadas para armazenar texto.</li>
+            <li><strong>Booleanos:</strong> Representam valores lógicos: <code>True</code> ou <code>False</code>.</li>
+        </ul>
+        <p>Exemplo de variáveis:</p>
+        <pre><code>inteiro = 10
+flutuante = 10.5
+texto = "Olá, Mundo!"
+booleano = True</code></pre>
+
+        <h3>5.3 Operadores</h3>
+        <p>Os operadores em Python são utilizados para realizar operações em variáveis e valores:</p>
+        <ul>
+            <li><strong>Operadores Aritméticos:</strong>
+                <ul>
+                    <li><code>+</code> (adição)</li>
+                    <li><code>-</code> (subtração)</li>
+                    <li><code>*</code> (multiplicação)</li>
+                    <li><code>/</code> (divisão)</li>
+                    <li><code>%</code> (módulo)</li>
+                </ul>
+            </li>
+            <li><strong>Operadores de Atribuição:</strong>
+                <ul>
+                    <li><code>=</code> (atribuição)</li>
+                    <li><code>+=</code> (atribuição com adição)</li>
+                    <li><code>-=</code> (atribuição com subtração)</li>
+                    <li><code>*=</code> (atribuição com multiplicação)</li>
+                    <li><code>/=</code> (atribuição com divisão)</li>
+                </ul>
+            </li>
+            <li><strong>Operadores de Comparação:</strong>
+                <ul>
+                    <li><code>==</code> (igualdade)</li>
+                    <li><code>!=</code> (desigualdade)</li>
+                    <li><code>&gt;</code> (maior que)</li>
+                    <li><code>&lt;</code> (menor que)</li>
+                    <li><code>&gt;=</code> (maior ou igual a)</li>
+                    <li><code>&lt;=</code> (menor ou igual a)</li>
+                </ul>
+            </li>
+            <li><strong>Operadores Lógicos:</strong>
+                <ul>
+                    <li><code>and</code> (e lógico)</li>
+                    <li><code>or</code> (ou lógico)</li>
+                    <li><code>not</code> (não lógico)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>5.4 Estruturas de Controle</h3>
+        <ul>
+            <li><strong>Condicionais:</strong> Permitem executar blocos de código com base em condições. Exemplos incluem <code>if</code>, <code>elif</code> e <code>else</code>.</li>
+            <li><strong>Laços de Repetição:</strong> Permitem repetir blocos de código. Exemplos incluem <code>for</code> e <code>while</code>.</li>
+        </ul>
+        <p>Exemplos de estruturas de controle:</p>
+        <pre><code># Condicional
+idade = 18
+if idade >= 18:
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
+
+# Laço de Repetição
+for i in range(5):
+    print(i)</code></pre>
+
+        <h2>6. Funções e Módulos</h2>
+
+        <h3>6.1 Funções</h3>
+        <p>Funções em Python são blocos de código que executam uma tarefa específica e podem ser reutilizadas. São definidas usando a palavra-chave <code>def</code>.</p>
+        <pre><code>def saudacao(nome):
+    return f"Olá, {nome}!"
+
+print(saudacao("Maria"))</code></pre>
+
+        <h3>6.2 Parâmetros e Argumentos</h3>
+        <p>Funções podem receber parâmetros, que são valores passados para a função. Existem diferentes tipos de parâmetros:</p>
+        <ul>
+            <li><strong>Parâmetros obrigatórios:</strong> Devem ser fornecidos quando a função é chamada.</li>
+            <li><strong>Parâmetros padrão:</strong> Têm valores predefinidos e são opcionais.</li>
+            <li><strong>Parâmetros de palavra-chave:</strong> Permitem passar argumentos de forma nomeada.</li>
+        </ul>
+        <p>Exemplo:</p>
+        <pre><code>def saudacao(nome, mensagem="Olá"):
+    return f"{mensagem}, {nome}!"
+
+print(saudacao("Ana"))
+print(saudacao("João", "Bom dia"))</code></pre>
+
+        <h3>6.3 Módulos</h3>
+        <p>Módulos são arquivos Python que contêm definições de funções, classes e variáveis. Eles permitem organizar o código em partes reutilizáveis. Você pode importar módulos usando a palavra-chave <code>import</code>.</p>
+        <p>Exemplo de importação de módulo:</p>
+        <pre><code># arquivo: matematicas.py
+def soma(a, b):
+    return a + b
+
+# arquivo principal
+import matematicas
+
+resultado = matematicas.soma(5, 3)
+print(resultado)</code></pre>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Introdução ao Python. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
