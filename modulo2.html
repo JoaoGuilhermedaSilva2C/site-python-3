@@ -1,1 +1,185 @@
-<DOCTYPE
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo II - Programas Básicos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #0d0d0d;
+        color: #e0e0e0;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        background: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    h1, h2, h3 {
+        color: #00aaff;
+        text-align: center;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .topic-list {
+        background-color: #262626;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .topic-list ul {
+        color: #b3b3b3;
+        font-size: 1.2em;
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    .cta-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: #ff5722;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 1.5em;
+        text-decoration: none;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+        background-color: #e64a19;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #00aaff;
+    }
+    .details {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #303030;
+        border-radius: 8px;
+    }
+    .details p {
+        font-size: 1.1em;
+        color: #c5c5c5;
+    }
+    .example-code {
+        background: #2d2d2d;
+        border: 1px solid #444;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        color: #c5c5c5;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 20px 0;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Módulo II</h1>
+        <h2>Programas Básicos, Vetores, Matrizes e Arquivos</h2>
+
+        <div class="topic-list">
+            <h3>O que você vai aprender neste módulo:</h3>
+            <ul>
+                <li><span class="highlight">Programas Básicos:</span>
+                    <ul>
+                        <li>Cálculo de Fatorial: Aprenda a lógica por trás da multiplicação sequencial, utilizando tanto loops quanto recursão.</li>
+                        <li>Verificação de Números Primos: Entenda como verificar se um número é primo usando uma abordagem eficiente.</li>
+                        <li>Soma de Números: Descubra como acumular valores em uma lista de maneira otimizada.</li>
+                        <li>Sequência de Fibonacci: Explore como gerar essa famosa sequência tanto com loops quanto recursivamente.</li>
+                        <li>Algoritmos de Busca e Ordenação: Mergulhe em algoritmos essenciais como Bubble Sort e Quick Sort.</li>
+                    </ul>
+                </li>
+                <li><span class="highlight">Vetores e Matrizes:</span>
+                    <ul>
+                        <li>Declaração e Inicialização de Vetores: Entenda como armazenar coleções de dados em estruturas unidimensionais.</li>
+                        <li>Operações com Vetores: Realize operações comuns como soma, busca e filtragem de elementos.</li>
+                        <li>Trabalhando com Matrizes 2D e 3D: Aprenda a lidar com estruturas mais complexas, aplicando-as em problemas práticos.</li>
+                        <li>Multiplicação e Transposição de Matrizes: Domine operações matemáticas essenciais para manipulação de dados.</li>
+                    </ul>
+                </li>
+                <li><span class="highlight">Manipulação de Arquivos:</span>
+                    <ul>
+                        <li>Criar, Abrir e Fechar Arquivos: Introdução à leitura e escrita de arquivos em Python.</li>
+                        <li>Leitura e Escrita em Arquivos de Texto: Manipule grandes volumes de dados com eficiência.</li>
+                        <li>Apagar Arquivos e Pastas: Aprenda a gerenciar o sistema de arquivos usando Python.</li>
+                        <li>Trabalhando com Arquivos CSV: Explore como usar bibliotecas como `csv` e `pandas` para lidar com dados tabulares.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="details">
+            <h3>Detalhes do Módulo:</h3>
+            <p>Neste módulo, você vai se aprofundar em conceitos fundamentais de programação e desenvolver habilidades para resolver problemas comuns com Python. Vamos abordar desde a lógica básica até a manipulação avançada de dados.</p>
+            <p>Além dos exemplos em aula, você terá acesso a exercícios práticos e projetos desafiadores que vão consolidar seu aprendizado. Cada tópico será complementado com exemplos de código bem comentados e explicações detalhadas.</p>
+        </div>
+
+        <div class="example-code">
+            <h3>Exemplos de Códigos:</h3>
+
+            <h4>Cálculo de Fatorial (usando loop):</h4>
+            <pre><code>def fatorial(n):
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+print(fatorial(5))  # Saída: 120
+            </code></pre>
+
+            <h4>Verificação de Número Primo:</h4>
+            <pre><code>def eh_primo(numero):
+    if numero &lt; 2:
+        return False
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
+
+print(eh_primo(17))  # Saída: True
+            </code></pre>
+
+            <h4>Operações com Matrizes:</h4>
+            <pre><code>matriz = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+
+def transpor(matriz):
+    return [[matriz[j][i] for j in range(len(matriz))] for i in range(len(matriz[0]))]
+
+print(transpor(matriz))
+            </code></pre>
+
+            <h4>Manipulação de Arquivos (Escrita e Leitura):</h4>
+            <pre><code># Escrever em um arquivo
+with open('dados.txt', 'w') as arquivo:
+    arquivo.write('Este é um exemplo de escrita em arquivo.\n')
+
+# Ler de um arquivo
+with open('dados.txt', 'r') as arquivo:
+    conteudo = arquivo.read()
+    print(conteudo)
+            </code></pre>
+        </div>
+
+        <a href="inscricao.html" class="cta-button">Garanta sua Vaga Agora!</a>
+    </div>
+</body>
+</html>
