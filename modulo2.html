@@ -78,7 +78,7 @@
         font-size: 1.1em;
         color: #c5c5c5;
     }
-    .example-code {
+    pre code {
         background: #2d2d2d;
         border: 1px solid #444;
         padding: 15px;
@@ -105,47 +105,18 @@
             <ul>
                 <li><span class="highlight">Programas Básicos:</span>
                     <ul>
-                        <li><strong>Cálculo de Fatorial:</strong> Vamos explorar a lógica da multiplicação sequencial, abordando a implementação tanto com loops quanto com recursão. Esse conceito é fundamental em várias áreas da matemática e programação.</li>
-                        <li><strong>Verificação de Números Primos:</strong> Você vai aprender a identificar números primos utilizando uma lógica otimizada para reduzir o número de comparações, essencial em situações onde a eficiência é crucial.</li>
-                        <li><strong>Soma de Números:</strong> Iremos demonstrar como acumular valores em uma lista, abordando desde a soma simples até o uso de funções como `sum()` e loops personalizados para somas condicionais.</li>
-                        <li><strong>Sequência de Fibonacci:</strong> Descubra a lógica por trás dessa sequência clássica. Vamos explorar como gerá-la tanto usando loops quanto recursão, além de discutir aplicações práticas em análise de dados e algoritmos.</li>
-                        <li><strong>Algoritmos de Busca e Ordenação:</strong> Entenda como funciona a base dos algoritmos de busca (linear e binária) e de ordenação (Bubble Sort, Quick Sort), com exemplos de código comentados e comparações de desempenho.</li>
-                    </ul>
-                </li>
-                <li><span class="highlight">Vetores e Matrizes:</span>
-                    <ul>
-                        <li><strong>Declaração e Inicialização de Vetores:</strong> Saiba como armazenar coleções de dados de forma eficiente em estruturas unidimensionais e aprenda a realizar operações comuns como acesso e alteração de valores.</li>
-                        <li><strong>Operações com Vetores:</strong> Vamos ensinar a realizar operações como soma de elementos, filtragem e busca. Além disso, você aprenderá a aplicar essas operações em situações reais, como processamento de listas de dados.</li>
-                        <li><strong>Trabalhando com Matrizes 2D e 3D:</strong> Iremos explorar a criação e manipulação de matrizes, abordando aplicações em gráficos, simulações e análise de dados. Você entenderá como organizar informações complexas em tabelas multidimensionais.</li>
-                        <li><strong>Multiplicação e Transposição de Matrizes:</strong> Aprenda as operações matemáticas mais comuns em matrizes e veja como aplicá-las em contextos como transformações geométricas, álgebra linear e análise numérica.</li>
-                    </ul>
-                </li>
-                <li><span class="highlight">Manipulação de Arquivos:</span>
-                    <ul>
-                        <li><strong>Criar, Abrir e Fechar Arquivos:</strong> Inicie com as operações básicas de leitura e escrita em arquivos de texto, essenciais para projetos que envolvem armazenamento de dados persistente.</li>
-                        <li><strong>Leitura e Escrita em Arquivos de Texto:</strong> Entenda como manipular grandes volumes de dados, realizar leituras linha a linha ou carregar arquivos inteiros, além de armazenar saídas de programas.</li>
-                        <li><strong>Apagar Arquivos e Pastas:</strong> Aprenda a gerenciar o sistema de arquivos diretamente com Python, desde excluir arquivos até limpar diretórios inteiros de maneira segura e eficiente.</li>
-                        <li><strong>Trabalhando com Arquivos CSV:</strong> Explore o uso de bibliotecas como `csv` e `pandas` para manipular arquivos de dados estruturados. Aprenda como ler, filtrar e modificar tabelas para aplicações em ciência de dados e automação de processos.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="example-code">
-            <h3>Exemplos de Códigos:</h3>
-
-            <h4>Cálculo de Fatorial (usando loop):</h4>
-            <pre><code>def fatorial(n):
+                        <li><strong>Cálculo de Fatorial:</strong> Vamos explorar a lógica da multiplicação sequencial, abordando a implementação tanto com loops quanto com recursão.
+                            <pre><code>def fatorial(n):
     resultado = 1
     for i in range(1, n + 1):
         resultado *= i
     return resultado
 
 print(fatorial(5))  # Saída: 120
-            </code></pre>
-
-            <h4>Verificação de Número Primo:</h4>
-            <pre><code>def eh_primo(numero):
+                            </code></pre>
+                        </li>
+                        <li><strong>Verificação de Números Primos:</strong> Você vai aprender a identificar números primos utilizando uma lógica otimizada para reduzir o número de comparações.
+                            <pre><code>def eh_primo(numero):
     if numero &lt; 2:
         return False
     for i in range(2, int(numero**0.5) + 1):
@@ -154,10 +125,74 @@ print(fatorial(5))  # Saída: 120
     return True
 
 print(eh_primo(17))  # Saída: True
-            </code></pre>
+                            </code></pre>
+                        </li>
+                        <li><strong>Soma de Números:</strong> Iremos demonstrar como acumular valores em uma lista, abordando desde a soma simples até o uso de funções como `sum()` e loops personalizados para somas condicionais.
+                            <pre><code>numeros = [1, 2, 3, 4, 5]
+soma = sum(numeros)
+print(soma)  # Saída: 15
+                            </code></pre>
+                        </li>
+                        <li><strong>Sequência de Fibonacci:</strong> Descubra a lógica por trás dessa sequência clássica. Vamos explorar como gerá-la tanto usando loops quanto recursão.
+                            <pre><code>def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
 
-            <h4>Operações com Matrizes:</h4>
-            <pre><code>matriz = [[1, 2, 3],
+fibonacci(10)  # Saída: 0 1 1 2 3 5 8 13 21 34
+                            </code></pre>
+                        </li>
+                        <li><strong>Algoritmos de Busca e Ordenação:</strong> Entenda como funciona a base dos algoritmos de busca (linear e binária) e de ordenação (Bubble Sort, Quick Sort).
+                            <pre><code># Exemplo de Busca Binária
+def busca_binaria(lista, item):
+    baixo = 0
+    alto = len(lista) - 1
+
+    while baixo &lt;= alto:
+        meio = (baixo + alto) // 2
+        chute = lista[meio]
+
+        if chute == item:
+            return meio
+        if chute &lt; item:
+            baixo = meio + 1
+        else:
+            alto = meio - 1
+
+    return None
+
+lista = [1, 3, 5, 7, 9]
+print(busca_binaria(lista, 7))  # Saída: 3
+                            </code></pre>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="highlight">Vetores e Matrizes:</span>
+                    <ul>
+                        <li><strong>Declaração e Inicialização de Vetores:</strong> Saiba como armazenar coleções de dados de forma eficiente em estruturas unidimensionais e aprenda a realizar operações comuns como acesso e alteração de valores.
+                            <pre><code># Declaração de um vetor
+vetor = [10, 20, 30, 40, 50]
+print(vetor[2])  # Saída: 30
+                            </code></pre>
+                        </li>
+                        <li><strong>Operações com Vetores:</strong> Vamos ensinar a realizar operações como soma de elementos, filtragem e busca.
+                            <pre><code># Soma dos elementos de um vetor
+vetor = [1, 2, 3, 4, 5]
+soma = sum(vetor)
+print(soma)  # Saída: 15
+                            </code></pre>
+                        </li>
+                        <li><strong>Trabalhando com Matrizes 2D e 3D:</strong> Iremos explorar a criação e manipulação de matrizes, abordando aplicações em gráficos, simulações e análise de dados.
+                            <pre><code># Criando uma matriz 2D
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Acessando um elemento
+print(matriz[1][2])  # Saída: 6
+                            </code></pre>
+                        </li>
+                        <li><strong>Multiplicação e Transposição de Matrizes:</strong> Aprenda as operações matemáticas mais comuns em matrizes e veja como aplicá-las em contextos como transformações geométricas.
+                            <pre><code>matriz = [[1, 2, 3],
           [4, 5, 6],
           [7, 8, 9]]
 
@@ -165,18 +200,46 @@ def transpor(matriz):
     return [[matriz[j][i] for j in range(len(matriz))] for i in range(len(matriz[0]))]
 
 print(transpor(matriz))
-            </code></pre>
+                            </code></pre>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="highlight">Manipulação de Arquivos:</span>
+                    <ul>
+                        <li><strong>Leitura e Escrita em Arquivos:</strong> Aprenda a ler dados de arquivos de texto e escrever saídas programáticas. Vamos explorar métodos básicos como `open()`, `write()`, e `readlines()`.
+                            <pre><code># Escrevendo em um arquivo
+with open('arquivo.txt', 'w') as file:
+    file.write('Hello, World!')
 
-            <h4>Manipulação de Arquivos (Escrita e Leitura):</h4>
-            <pre><code># Escrever em um arquivo
-with open('dados.txt', 'w') as arquivo:
-    arquivo.write('Este é um exemplo de escrita em arquivo.\n')
+# Lendo de um arquivo
+with open('arquivo.txt', 'r') as file:
+    conteudo = file.read()
+    print(conteudo)  # Saída: Hello, World!
+                            </code></pre>
+                        </li>
+                        <li><strong>Manipulação Avançada de Arquivos:</strong> Veremos técnicas para manipular grandes volumes de dados, incluindo leitura em blocos e processamento de arquivos CSV.
+                            <pre><code>import csv
 
-# Ler de um arquivo
-with open('dados.txt', 'r') as arquivo:
-    conteudo = arquivo.read()
-    print(conteudo)
-            </code></pre>
+# Leitura de um arquivo CSV
+with open('dados.csv', newline='') as csvfile:
+    leitor = csv.reader(csvfile)
+    for linha in leitor:
+        print(', '.join(linha))
+                            </code></pre>
+                        </li>
+                        <li><strong>Exclusão e Renomeação de Arquivos:</strong> Você aprenderá a gerenciar arquivos e pastas dinamicamente utilizando o módulo `os` do Python.
+                            <pre><code>import os
+
+# Renomeando um arquivo
+os.rename('arquivo.txt', 'novo_arquivo.txt')
+
+# Removendo um arquivo
+os.remove('novo_arquivo.txt')
+                            </code></pre>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <a href="inscricao.html" class="cta-button">Garanta sua Vaga Agora!</a>
