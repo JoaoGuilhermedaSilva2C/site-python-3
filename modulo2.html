@@ -23,7 +23,25 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
-    h1, h2, h3 {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1e1e1e;
+        padding: 10px 20px;
+        border-bottom: 2px solid #00aaff;
+    }
+    header h1 {
+        margin: 0;
+        color: #00aaff;
+        font-size: 1.8em;
+    }
+    .logo {
+        font-weight: bold;
+        color: #00aaff;
+        font-size: 1.8em;
+    }
+    h2, h3 {
         color: #00aaff;
         text-align: center;
     }
@@ -90,6 +108,9 @@
     }
 </style>
 <body>
+    <header>
+        <div class="logo">CodePy</div>
+    </header>
     <div class="container">
         <h1>Módulo II</h1>
         <h2>Programas Básicos, Vetores, Matrizes e Arquivos</h2>
@@ -116,7 +137,7 @@ print(fatorial(5))  # Saída: 120
                         </li>
                         <li><strong>Verificação de Números Primos:</strong> Identifique números primos com uma lógica otimizada.
                             <pre><code>def eh_primo(numero):
-    if numero &lt; 2:
+    if numero < 2:
         return False
     for i in range(2, int(numero**0.5) + 1):
         if numero % i == 0:
@@ -148,13 +169,13 @@ def busca_binaria(lista, item):
     baixo = 0
     alto = len(lista) - 1
 
-    while baixo &lt;= alto:
+    while baixo <= alto:
         meio = (baixo + alto) // 2
         chute = lista[meio]
 
         if chute == item:
             return meio
-        if chute &lt; item:
+        if chute < item:
             baixo = meio + 1
         else:
             alto = meio - 1
