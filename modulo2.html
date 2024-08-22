@@ -163,72 +163,7 @@ print(soma)  # Saída: 15
 fibonacci(10)  # Saída: 0 1 1 2 3 5 8 13 21 34
                             </code></pre>
                         </li>
-                        <li><strong>Algoritmo de Busca:</strong> Entenda como implementar algoritmos de busca (linear e binária).
-                              <li><strong>EX:</strong>
-                            <pre><code>def busca_binaria(arr, x):
-    low = 0
-    high = len(arr) - 1
-    mid = 0
-
-    while low <= high:
-        mid = (high + low) // 2
-
-        if arr[mid] < x:
-            low = mid + 1
-        elif arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-
-    return -1
-
-# Exemplo de uso
-arr = [2, 3, 4, 10, 40]
-resultado = busca_binaria(arr, 10)
-if resultado != -1:
-    print(f"Elemento encontrado na posição {resultado}")
-else:
-    print("Elemento não encontrado")</code></pre>
-                                  
-         <li><strong>Algoritmo de Ordenação:</strong> Entenda como implementar algoritmos de ordenação(linear e binária)
-               <li><strong>EX:</strong>
-                            <pre><code>def merge_sort(arr):
-    if len(arr) > 1:
-        mid = len(arr) // 2
-        left_half = arr[:mid]
-        right_half = arr[mid:]
-
-        merge_sort(left_half)
-        merge_sort(right_half)
-
-        i = j = k = 0
-
-        while i < len(left_half) and j < len(right_half):
-            if left_half[i] < right_half[j]:
-                arr[k] = left_half[i]
-                i += 1
-            else:
-                arr[k] = right_half[j]
-                j += 1
-            k += 1
-
-        while i < len(left_half):
-            arr[k] = left_half[i]
-            i += 1
-            k += 1
-
-        while j < len(right_half):
-            arr[k] = right_half[j]
-            j += 1
-            k += 1
-
-# Exemplo de uso
-arr = [38, 27, 43, 3, 9, 82, 10]
-merge_sort(arr)
-print("Array ordenado:", arr)</code></pre>
-                        </li>
-                    </ul>
-                </li>
+                        
                 <li><span class="highlight">Vetores e Matrizes:</span>
                     <ul>
                         <li><strong>Declaração e Inicialização de Vetores:</strong> Armazene coleções de dados de forma eficiente.
