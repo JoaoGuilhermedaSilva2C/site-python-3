@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo III - Algoritmos e Ordenação</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e1e1e;
+            padding: 10px 20px;
+            border-bottom: 2px solid #00aaff;
+        }
+        header h1 {
+            margin: 0;
+            color: #00aaff;
+            font-size: 1.8em;
+        }
+        .logo {
+            font-weight: bold;
+            color: #00aaff;
+            font-size: 1.8em;
+        }
+        h2, h3 {
+            color: #00aaff;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .module-content {
+            background-color: #262626;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .module-content ul {
+            color: #b3b3b3;
+            font-size: 1.2em;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        pre code {
+            background: #2d2d2d;
+            border: 1px solid #444;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #c5c5c5;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #00aaff;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #303030;
+            border-radius: 8px;
+        }
+        .details p {
+            font-size: 1.1em;
+            color: #c5c5c5;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            border-top: 2px solid #00aaff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CodePy</div>
+    </header>
+    <div class="container">
+        <h1>Módulo III - Algoritmos e Ordenação</h1>
+        
+        <h2>Introdução</h2>
+        <div class="details">
+            <p>Neste módulo, você vai explorar os principais algoritmos de ordenação, aprender a implementar cada um deles em código e compreender suas aplicações e eficiência. Vamos abordar desde os algoritmos mais simples até os mais complexos, proporcionando uma visão abrangente sobre a ordenação de dados.</p>
+        </div>
+
+        <h2>Conteúdos e Exemplos Práticos:</h2>
+        <div class="module-content">
+            <ul>
+                <li><span class="highlight">Introdução aos Algoritmos de Ordenação:</span>
+                    <p>A ordenação é uma das operações mais comuns em ciência da computação. Um algoritmo de ordenação é um processo que organiza os elementos de uma lista ou array em uma determinada ordem, como crescente ou decrescente. A eficiência de um algoritmo é medida em termos de complexidade de tempo e espaço.</p>
+                </li>
+
+                <li><span class="highlight">Bubble Sort:</span>
+                    <p>O <strong>Bubble Sort</strong> é um algoritmo de ordenação simples que percorre a lista repetidamente, comparando elementos adjacentes e trocando-os se estiverem na ordem errada. Este processo é repetido até que a lista esteja ordenada.</p>
+                    <pre><code>def bubbleSort(arr):
+    n = len(arr)
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+# Exemplo de uso:
+arr = [64, 34, 25, 12, 22, 11, 90]
+print(bubbleSort(arr))  # Saída: [11, 12, 22, 25, 34, 64, 90]</code></pre>
+                    <p><strong>Complexidade:</strong> O Bubble Sort tem uma complexidade de tempo O(n²), o que significa que ele não é eficiente para grandes listas. No entanto, é fácil de entender e implementar.</p>
+                </li>
+
+                <li><span class="highlight">Selection Sort:</span>
+                    <p>O <strong>Selection Sort</strong> funciona encontrando repetidamente o menor elemento da lista não ordenada e trocando-o com o primeiro elemento não ordenado. Isso resulta em uma lista ordenada gradualmente.</p>
+                    <pre><code>def selectionSort(arr):
+    for i in range(len(arr)):
+        min_idx = i
+        for j in range(i+1, len(arr)):
+            if arr[min_idx] > arr[j]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
+
+# Exemplo de uso:
+arr = [64, 25, 12, 22, 11]
+print(selectionSort(arr))  # Saída: [11, 12, 22, 25, 64]</code></pre>
+                    <p><strong>Complexidade:</strong> Assim como o Bubble Sort, o Selection Sort tem complexidade O(n²). Ele é mais eficiente em termos de trocas, mas ainda é ineficiente para grandes listas.</p>
+                </li>
+
+                <li><span class="highlight">Insertion Sort:</span>
+                    <p>O <strong>Insertion Sort</strong> constrói a lista ordenada de forma incremental, removendo um elemento de cada vez da lista de entrada e inserindo-o na posição correta na lista ordenada.</p>
+                    <pre><code>def insertionSort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i-1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
+
+# Exemplo de uso:
+arr = [12, 11, 13, 5, 6]
+print(insertionSort(arr))  # Saída: [5, 6, 11, 12, 13]</code></pre>
+                    <p><strong>Complexidade:</strong> O Insertion Sort tem uma complexidade de tempo O(n²), mas pode ser mais eficiente do que o Bubble e o Selection Sort para listas pequenas ou quase ordenadas.</p>
+                </li>
+
+                <li><span class="highlight">Quick Sort:</span>
+                    <p>O <strong>Quick Sort</strong> é um algoritmo de ordenação eficiente que utiliza a técnica de divisão e conquista. Ele escolhe um "pivô" e particiona a lista, de forma que elementos menores que o pivô fiquem à esquerda e elementos maiores fiquem à direita. O processo é repetido recursivamente.</p>
+                    <pre><code>def quickSort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[0]
+        less_than_pivot = [x for x in arr[1:] if x <= pivot]
+        greater_than_pivot = [x for x in arr[1:] if x > pivot]
+        return quickSort(less_than_pivot) + [pivot] + quickSort(greater_than_pivot)
+
+# Exemplo de uso:
+arr = [10, 7, 8, 9, 1, 5]
+print(quickSort(arr))  # Saída: [1, 5, 7, 8, 9, 10]</code></pre>
+                    <p><strong>Complexidade:</strong> O Quick Sort tem uma complexidade de tempo média de O(n log n), o que o torna muito eficiente para listas grandes. No entanto, no pior caso, sua complexidade pode ser O(n²).</p>
+                </li>
+
+                <li><span class="highlight">Merge Sort:</span>
+                    <p>O <strong>Merge Sort</strong> é outro algoritmo eficiente que também utiliza a técnica de divisão e conquista. Ele divide a lista ao meio, ordena cada metade recursivamente e depois combina as metades ordenadas.</p>
+                    <pre><code>def mergeSort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
+
+        mergeSort(L)
+        mergeSort(R)
+
+        i = j = k = 0
+
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
+    return arr
+
+# Exemplo de uso:
+arr = [12, 11, 13, 5, 6, 7]
+print(mergeSort(arr))  # Saída: [5, 6, 7, 11, 12, 13]</code></pre>
+                    <p><strong>Complexidade:</strong> O Merge Sort tem uma complexidade de tempo O(n log n) em todos os casos, o que o torna eficiente e estável, sendo uma excelente escolha para listas grandes.</p>
+                </li>
+
+                <li><span class="highlight">Heap Sort:</span>
+                    <p>O <strong>Heap Sort</strong> converte a lista em uma estrutura de dados chamada "heap", que é uma árvore binária onde cada pai é maior que seus filhos. A lista é então ordenada extraindo repetidamente o maior elemento.</p>
+                    <pre><code>def heapify(arr, n, i):
+    largest = i
+    l = 2 * i + 1
+    r = 2 * i + 2
+
+    if l < n and arr[i] < arr[l]:
+        largest = l
+
+    if r < n and arr[largest] < arr[r]:
+        largest = r
+
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+
+def heapSort(arr):
+    n = len(arr)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+    for i in range(n-1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]
+        heapify(arr, i, 0)
+    return arr
+
+# Exemplo de uso:
+arr = [12, 11, 13, 5, 6, 7]
+print(heapSort(arr))  # Saída: [5, 6, 7, 11, 12, 13]</code></pre>
+                    <p><strong>Complexidade:</strong> O Heap Sort tem uma complexidade de tempo O(n log n) e é um algoritmo de ordenação eficiente e em espaço constante.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 CodePy. Todos os direitos reservados a minha mãe que ainda não entendeu o que é ordenação kkkkkk.</p>
+    </footer>
+</body>
+</html>
