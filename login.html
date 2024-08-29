@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CodePythonClub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        .login-container h1 {
+            text-align: center;
+            color: #00aaff;
+            margin-bottom: 20px;
+        }
+
+        .login-container label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #00aaff;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #00aaff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #008ecc;
+        }
+
+        .login-container .forgot-password,
+        .login-container .register {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-container .forgot-password a,
+        .login-container .register a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .login-container .forgot-password a:hover,
+        .login-container .register a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="dashboard.html" method="POST">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Entrar">
+
+            <div class="forgot-password">
+                <a href="#">Esqueceu sua senha?</a>
+            </div>
+
+            <div class="register">
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
