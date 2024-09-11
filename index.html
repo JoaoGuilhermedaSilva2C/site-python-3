@@ -92,6 +92,30 @@
     .benefits p, .modules p {
         font-size: 14px;
     }
+    /* Estilo dos botões no canto inferior */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1e1e1e;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .bottom-nav a {
+        display: inline-block;
+        background-color: #00aaff;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .bottom-nav a:hover {
+        background-color: #008fcc;
+    }
 </style>
 <body>
     <header>
@@ -132,6 +156,18 @@
             </div>
         </div>
     </div>
+
+    <div class="bottom-nav">
+        <a href="modulo.html">Módulo I</a>
+        <a href="modulo2.html">Módulo II</a>
+        <a href="modulo3.html">Módulo III</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CodePythonClub. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
 
     <footer>
         <p>&copy; 2024 CodePythonClub. Todos os direitos reservados.</p>
