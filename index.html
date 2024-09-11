@@ -65,11 +65,30 @@
             background: #1e1e1e;
             padding: 20px;
             border-bottom: 2px solid #00aaff;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             margin: 0;
             color: #00aaff;
+        }
+        .auth-buttons, .download-button {
+            display: flex;
+            gap: 10px;
+        }
+        .auth-buttons a, .download-button a {
+            background-color: #00aaff;
+            color: #fff;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .auth-buttons a:hover, .download-button a:hover {
+            background-color: #008ecc;
         }
         .benefits, .modules {
             display: flex;
@@ -91,34 +110,17 @@
         .benefits p, .modules p {
             font-size: 14px;
         }
-
-        /* Botão de Download do Aplicativo */
-        .download-button {
-            display: inline-block;
-            background-color: #00aaff;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-        }
-
-        .download-button:hover {
-            background-color: #008ecc;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>CodePythonClub</h1>
-        <h3>Bem-vindo ao Melhor Curso de Programação em Python do Brasil</h3>
-        
-        <!-- Botão para download do aplicativo -->
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="link-para-download-do-app" class="download-button">Baixar Aplicativo</a>
+        <div class="auth-buttons">
+            <a href="login.html">Login</a>
+            <a href="cadastro.html">Cadastro</a>
+        </div>
+        <div class="download-button">
+            <a href="link-para-download-do-app">Baixar Aplicativo</a>
         </div>
     </header>
     
@@ -161,7 +163,6 @@
     </footer>
 </body>
 </html>
-
     <footer>
         <p>&copy; 2024 CodePythonClub. Todos os direitos reservados.</p>
     </footer>
