@@ -92,17 +92,13 @@
     .benefits p, .modules p {
         font-size: 14px;
     }
-    /* Estilo dos botões no canto inferior */
-    .bottom-nav {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #1e1e1e;
-        padding: 10px 0;
-        text-align: center;
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    /* Estilo dos botões no topo */
+    .top-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
-    .bottom-nav a {
+    .top-nav a {
         display: inline-block;
         background-color: #00aaff;
         color: white;
@@ -113,7 +109,7 @@
         font-weight: bold;
         transition: background-color 0.3s ease;
     }
-    .bottom-nav a:hover {
+    .top-nav a:hover {
         background-color: #008fcc;
     }
 </style>
@@ -122,6 +118,13 @@
         <h1>CodePythonClub</h1>
         <h3>Bem-vindo ao Melhor Curso de Programação em Python do Brasil</h3>
     </header>
+
+    <!-- Botões no topo da página -->
+    <div class="top-nav">
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="link-para-download-do-app">Baixar Aplicativo</a>
+    </div>
     
     <div class="container">
         <p>Desenvolva suas habilidades de programação e avance na sua carreira com nosso curso abrangente de Python.</p>
@@ -157,22 +160,12 @@
         </div>
     </div>
 
-    <div class="bottom-nav">
-        <a href="modulo.html">Módulo I</a>
-        <a href="modulo2.html">Módulo II</a>
-        <a href="modulo3.html">Módulo III</a>
-        <!-- Botão para baixar o aplicativo -->
-        <a href="link-para-download-do-app">Baixar Aplicativo</a>
-        <!-- Botões de Login e Cadastro -->
-        <a href="login.html">Login</a>
-        <a href="cadastro.html">Cadastro</a>
-    </div>
-
     <footer>
         <p>&copy; 2024 CodePythonClub. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
+
 
     <footer>
         <p>&copy; 2024 CodePythonClub. Todos os direitos reservados.</p>
