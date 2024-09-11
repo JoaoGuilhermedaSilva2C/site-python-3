@@ -72,6 +72,26 @@
         margin: 0;
         color: #00aaff;
     }
+    /* Estilo dos botões na parte superior */
+    .top-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .top-nav a {
+        display: inline-block;
+        background-color: #00aaff;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .top-nav a:hover {
+        background-color: #008fcc;
+    }
     .benefits, .modules {
         display: flex;
         justify-content: space-around;
@@ -92,26 +112,6 @@
     .benefits p, .modules p {
         font-size: 14px;
     }
-    /* Estilo dos botões no topo */
-    .top-nav {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-    .top-nav a {
-        display: inline-block;
-        background-color: #00aaff;
-        color: white;
-        padding: 10px 20px;
-        margin: 5px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-    .top-nav a:hover {
-        background-color: #008fcc;
-    }
 </style>
 <body>
     <header>
@@ -121,6 +121,9 @@
 
     <!-- Botões no topo da página -->
     <div class="top-nav">
+        <a href="modulo.html">Módulo I</a>
+        <a href="modulo2.html">Módulo II</a>
+        <a href="modulo3.html">Módulo III</a>
         <a href="login.html">Login</a>
         <a href="cadastro.html">Cadastro</a>
         <a href="link-para-download-do-app">Baixar Aplicativo</a>
