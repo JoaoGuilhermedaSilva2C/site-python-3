@@ -86,6 +86,7 @@ func main() {
     fmt.Println("Olá, Mundo!")
 }
             </code></pre>
+            <p><strong>Explicação:</strong> Este é o primeiro programa básico em Go, onde usamos a função <code>fmt.Println()</code> para imprimir "Olá, Mundo!" no terminal. A função <code>main()</code> é o ponto de entrada obrigatório em programas Go.</p>
         </section>
 
         <section>
@@ -108,6 +109,7 @@ func main() {
     fmt.Println("Fatorial de 5 é:", fatorial(5))
 }
             </code></pre>
+            <p><strong>Explicação:</strong> Esta função calcula o fatorial de um número de forma recursiva. Se o número for 0, retorna 1. Caso contrário, multiplica o número pelo fatorial do número anterior até chegar a 1.</p>
 
             <h3>Número Primo</h3>
             <pre><code>
@@ -132,6 +134,7 @@ func main() {
     fmt.Println("7 é primo?", isPrimo(7))
 }
             </code></pre>
+            <p><strong>Explicação:</strong> Este código verifica se um número é primo. A função <code>isPrimo()</code> percorre os números de 2 até o número dado e retorna <code>false</code> se encontrar um divisor. Se não houver divisores, retorna <code>true</code>.</p>
 
             <h3>Vetores e Matrizes</h3>
             <pre><code>
@@ -145,6 +148,7 @@ func main() {
     fmt.Println("Vetor:", vetor)
 }
             </code></pre>
+            <p><strong>Explicação:</strong> O código demonstra como declarar um vetor em Go e acessar seus elementos. Aqui, um vetor de 5 inteiros é declarado e seus valores são impressos usando <code>fmt.Println()</code>.</p>
 
             <h3>Trabalhando com Arquivos</h3>
             <pre><code>
@@ -182,6 +186,7 @@ func main() {
     fmt.Println("Conteúdo do arquivo:", string(dados))
 }
             </code></pre>
+            <p><strong>Explicação:</strong> Este código demonstra como criar e ler arquivos em Go. O arquivo "exemplo.txt" é criado, uma string é gravada nele e depois lida. Funções como <code>os.Create()</code> e <code>os.ReadFile()</code> são usadas para manipulação de arquivos.</p>
         </section>
 
         <section>
@@ -218,6 +223,7 @@ func main() {
     }
 }
             </code></pre>
+            <p><strong>Explicação:</strong> A busca binária procura um elemento em uma lista ordenada, dividindo o intervalo de pesquisa pela metade a cada iteração. O código retorna a posição do elemento se encontrado ou <code>-1</code> se não estiver presente.</p>
 
             <h3>Ordenação por Inserção</h3>
             <pre><code>
@@ -244,31 +250,7 @@ func main() {
     fmt.Println("Vetor ordenado:", vetor)
 }
             </code></pre>
-        </section>
-
-        <section>
-            <h2>4. Explicação dos Códigos</h2>
-
-            <h3>1. Olá Mundo</h3>
-            <p>Este é o primeiro programa básico em qualquer linguagem de programação. Em Go, usamos a função <code>fmt.Println()</code> para imprimir uma mensagem no terminal. A função <code>main()</code> é o ponto de entrada do programa.</p>
-
-            <h3>2. Fatorial</h3>
-            <p>O código calcula o fatorial de um número usando recursão. A função <code>fatorial()</code> chama a si mesma até que o número chegue a zero, onde o valor de retorno é 1. A multiplicação dos valores sucessivos retorna o resultado.</p>
-
-            <h3>3. Número Primo</h3>
-            <p>Este código verifica se um número é primo. Ele percorre todos os números menores que o número dado e verifica se algum deles o divide exatamente. Se nenhum número o dividir, ele é primo.</p>
-
-            <h3>4. Vetores</h3>
-            <p>Este código mostra como declarar e acessar vetores em Go. Um vetor é uma coleção de elementos de tamanho fixo, e podemos acessá-los usando seus índices.</p>
-
-            <h3>5. Arquivos</h3>
-            <p>O código cria e manipula arquivos. Usamos <code>os.Create()</code> para criar um arquivo e <code>os.ReadFile()</code> para ler o conteúdo de um arquivo. Essas funções retornam erros que precisam ser tratados.</p>
-
-            <h3>6. Busca Binária</h3>
-            <p>A busca binária encontra um elemento em uma lista ordenada, dividindo o intervalo de busca pela metade a cada iteração. Se o elemento do meio for o desejado, ele é retornado. Caso contrário, o intervalo de busca é reduzido até o valor ser encontrado ou não.</p>
-
-            <h3>7. Ordenação por Inserção</h3>
-            <p>A ordenação por inserção é um algoritmo que constrói uma lista ordenada, movendo elementos menores à esquerda, uma posição de cada vez. É útil para pequenas listas, mas ineficiente para listas maiores.</p>
+            <p><strong>Explicação:</strong> A ordenação por inserção percorre o vetor e insere cada elemento na sua posição correta em uma sublista crescente. O código reorganiza os elementos diretamente no vetor, sem a necessidade de uma estrutura adicional.</p>
         </section>
     </div>
 
@@ -277,4 +259,3 @@ func main() {
     </footer>
 </body>
 </html>
-
