@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submódulo 1 - Introdução ao Go Lang</title>
+    <title>Submódulo 1 - Sistema Operacional Inferno e Linguagem Go</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Estilo global para garantir fundo escuro */
@@ -49,70 +49,36 @@
 </head>
 <body>
     <header>
-        <h1>Submódulo 1 - Introdução ao Go Lang</h1>
-        <h3>Primeiros passos com a linguagem Go</h3>
+        <h1>Submódulo 1 - Sistema Operacional Inferno e Linguagem Go</h1>
+        <h3>Entenda o Sistema Inferno e como ele influenciou a linguagem Go</h3>
     </header>
 
     <div class="content">
-        <h2>O que é Go Lang?</h2>
-        <p>Go, também conhecida como Golang, é uma linguagem de programação open-source desenvolvida pelo Google. Criada para ser eficiente, simples e segura, ela é amplamente utilizada em sistemas distribuídos, servidores e APIs. Seu modelo de concorrência eficiente e coleta de lixo embutida a tornam ideal para aplicações escaláveis e de alta performance.</p>
+        <h2>O que é o Sistema Operacional Inferno?</h2>
+        <p>O **Sistema Operacional Inferno** foi criado nos **Bell Labs** durante os anos 90, como uma solução minimalista, modular e de alto desempenho para computação em rede e dispositivos embarcados. Seu design visava ser eficiente e simples, ao mesmo tempo que oferecia flexibilidade para suportar novos dispositivos e interações em rede.</p>
         
-        <h3>Por que usar Go Lang?</h3>
+        <h3>Características Principais do Inferno:</h3>
         <ul>
-            <li><strong>Alto Desempenho:</strong> Compila diretamente para código de máquina, proporcionando uma performance comparável à de C/C++.</li>
-            <li><strong>Sintaxe Simples:</strong> Tem uma sintaxe direta e limpa, facilitando a escrita e manutenção de código.</li>
-            <li><strong>Concorrência Embutida:</strong> Oferece suporte nativo para programas concorrentes usando goroutines e canais.</li>
-            <li><strong>Biblioteca Padrão Robusta:</strong> Inclui uma vasta biblioteca padrão que cobre desde manipulação de arquivos até funções de rede e criptografia.</li>
-            <li><strong>Compilação Rápida:</strong> Compila rapidamente, o que acelera o ciclo de desenvolvimento.</li>
+            <li><strong>Modularidade:</strong> A arquitetura do Inferno era modular, permitindo que diferentes partes do sistema fossem facilmente substituídas ou modificadas, sem comprometer a estrutura geral.</li>
+            <li><strong>Linguagem Limbo:</strong> O Inferno foi desenvolvido com a linguagem de programação **Limbo**, que foi criada para interagir diretamente com o sistema operacional, de forma simples e eficiente. Limbo compartilhava conceitos de tipagem forte e concorrência, como Go, mas com foco no ambiente do Inferno.</li>
+            <li><strong>Foco em Redes:</strong> O Inferno foi projetado com uma forte ênfase em conectividade em rede. Isso o tornava ideal para ambientes distribuídos, como sistemas embarcados ou servidores com múltiplos dispositivos conectados.</li>
+            <li><strong>Interface Simples:</strong> A interface gráfica do Inferno era simples e focada na interação direta com o usuário, tornando-o acessível tanto para programadores quanto para administradores de sistemas.</li>
+            <li><strong>Estrutura de "Divisão e Conquista":</strong> O Inferno utilizava uma abordagem de "divisão e conquista", onde as tarefas eram divididas em unidades pequenas e independentes que podiam ser gerenciadas e paralelizadas de maneira mais eficaz.</li>
         </ul>
 
-        <h2>Primeiro Programa - "Olá, Mundo!"</h2>
-        <p>Para começar, vamos criar um programa básico em Go que exibe a mensagem "Olá, Mundo!" no console. Esse exemplo ajuda a entender a estrutura fundamental de um programa em Go.</p>
+        <h3>Como o Go se Relaciona com o Inferno?</h3>
+        <p>A linguagem **Go** foi desenvolvida no Google com o objetivo de melhorar o desempenho e a simplicidade da programação, especialmente em ambientes de alta concorrência. Embora o Go não tenha sido diretamente inspirado pelo Inferno, ele compartilha alguns conceitos fundamentais:</p>
         
-        <pre><code>
-// Primeiro programa em Go: Olá Mundo
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Olá, Mundo!")
-}
-        </code></pre>
-
-        <h3>Explicação do Código:</h3>
-        <p>Vamos entender cada parte do código:</p>
         <ul>
-            <li><code>package main</code>: Define o pacote principal do programa. Todo programa Go deve ter um pacote principal para ser executado.</li>
-            <li><code>import "fmt"</code>: Importa o pacote <code>fmt</code>, que contém funções para entrada e saída. Vamos usar <code>fmt.Println</code> para exibir a mensagem.</li>
-            <li><code>func main()</code>: A função <code>main</code> é o ponto de entrada obrigatório do programa. Sem ela, o programa não executa.</li>
-            <li><code>fmt.Println("Olá, Mundo!")</code>: Exibe "Olá, Mundo!" no console. <code>Println</code> imprime a mensagem seguida de uma nova linha.</li>
+            <li><strong>Concorrência:</strong> Assim como o Inferno com sua arquitetura modular e concorrência em Limbo, o Go também tem suporte nativo a concorrência por meio das goroutines, que permitem a execução de múltiplos processos simultâneos de forma eficiente.</li>
+            <li><strong>Simplicidade e Modularidade:</strong> O Go e o Inferno têm em comum a busca por simplicidade e modularidade. Ambos buscam criar sistemas que sejam fáceis de entender, modificar e escalar.</li>
+            <li><strong>Rede e Comunicação:</strong> O foco do Inferno em sistemas distribuídos e conectados é refletido no Go, que também foi projetado para ser altamente eficiente em sistemas de rede e servidores web.</li>
         </ul>
 
-        <h2>Características Únicas do Go</h2>
-        <p>Go inclui várias características que o diferenciam de outras linguagens de programação:</p>
-        <ul>
-            <li><strong>Goroutines:</strong> As goroutines são uma maneira leve de executar funções de forma concorrente, usando pouca memória e com troca de contexto eficiente.</li>
-            <li><strong>Canais:</strong> Permitem a comunicação entre goroutines, facilitando a troca de informações entre processos simultâneos.</li>
-            <li><strong>Compilação Direta:</strong> Compila rapidamente para código de máquina, eliminando o tempo de execução.</li>
-        </ul>
+        <h2>Conclusão</h2>
+        <p>O **Inferno** foi um sistema inovador que buscava simplicidade e flexibilidade através de sua arquitetura modular e foco em redes. Embora tenha sido desenvolvido com a linguagem Limbo, muitos de seus princípios influenciaram a criação de Go, uma linguagem moderna com foco em desempenho e concorrência. Ambos os sistemas destacam a importância de se criar plataformas eficientes, simples e escaláveis, sendo o Inferno uma experiência valiosa para o desenvolvimento de sistemas operacionais modernos e o Go uma linguagem que se beneficiou dessa filosofia.</p>
 
-        <h2>Instalando Go Lang</h2>
-        <p>Para começar a programar com Go, você pode instalar o compilador Go em seu sistema. Siga estas instruções:</p>
-        <ol>
-            <li>Visite o site oficial: <a href="https://golang.org/dl/" target="_blank">https://golang.org/dl/</a></li>
-            <li>Baixe o instalador adequado para seu sistema operacional (Windows, macOS ou Linux).</li>
-            <li>Siga as instruções para concluir a instalação.</li>
-            <li>Para verificar a instalação, abra o terminal e digite <code>go version</code> para ver a versão instalada.</li>
-        </ol>
-
-        <h2>Rodando o Programa</h2>
-        <p>Para compilar e rodar seu primeiro programa em Go:</p>
-        <ol>
-            <li>Salve o código em um arquivo chamado <code>ola_mundo.go</code>.</li>
-            <li>Abra o terminal, navegue até o diretório do arquivo e digite: <code>go run ola_mundo.go</code></li>
-            <li>O terminal exibirá a mensagem <code>Olá, Mundo!</code> se o programa foi executado com sucesso.</li>
-        </ol>
+        <p>Agora que você entendeu os conceitos principais por trás do **Inferno** e a maneira como a linguagem **Go** evoluiu a partir desses conceitos, você está pronto para explorar mais sobre como Go pode ser utilizado para criar sistemas modernos e de alto desempenho.</p>
     </div>
 
     <footer>
@@ -120,4 +86,3 @@ func main() {
     </footer>
 </body>
 </html>
-
