@@ -6,64 +6,6 @@
     <title>Módulo IV - Go Lang</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #0f0f0f;
-        color: #e0e0e0;
-    }
-    .container {
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-        background: #1e1e1e;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-    h1, h2, h3 {
-        color: #00aaff;
-        text-align: center;
-    }
-    pre code {
-        display: block;
-        background: #2d2d2d;
-        border: 1px solid #444;
-        padding: 15px;
-        border-radius: 8px;
-        overflow-x: auto;
-        color: #c5c5c5;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    ul, ol {
-        margin: 10px 0;
-        padding: 0 20px;
-    }
-    ul {
-        list-style-type: disc;
-    }
-    ol {
-        list-style-type: decimal;
-    }
-    footer {
-        text-align: center;
-        margin: 20px 0;
-        padding: 10px;
-        background: #1e1e1e;
-        border-radius: 8px;
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-    }
-    a {
-        color: #00aaff;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-</style>
 <body>
     <header>
         <h1>Módulo IV - Go Lang</h1>
@@ -71,11 +13,12 @@
     </header>
 
     <div class="container">
+        <!-- Submódulo 1: Introdução ao Go Lang -->
         <section>
-            <h2>1. Introdução ao Go Lang</h2>
-            <p>Go, também conhecida como Golang, é uma linguagem de programação open-source criada pela Google. Ela é conhecida por ser simples, eficiente e muito utilizada em sistemas distribuídos e aplicações com alta concorrência.</p>
-            <p>Vamos começar com os conceitos básicos e os primeiros passos na programação com Go.</p>
-            
+            <h2>Submódulo 1: Introdução ao Go Lang</h2>
+            <p>Go, também conhecida como Golang, é uma linguagem de programação open-source criada pela Google. Nesta seção, aprenderemos conceitos básicos de Go e daremos os primeiros passos com a linguagem.</p>
+
+            <h3>Primeiro Programa - "Olá Mundo"</h3>
             <pre><code>
 // Primeiro programa em Go: Olá Mundo
 package main
@@ -86,12 +29,14 @@ func main() {
     fmt.Println("Olá, Mundo!")
 }
             </code></pre>
-            <p><strong>Explicação:</strong> Este é o primeiro programa básico em Go, onde usamos a função <code>fmt.Println()</code> para imprimir "Olá, Mundo!" no terminal. A função <code>main()</code> é o ponto de entrada obrigatório em programas Go.</p>
+            <p><strong>Explicação:</strong> Este é um exemplo básico de programa em Go. Usamos a função <code>fmt.Println()</code> para exibir a mensagem "Olá, Mundo!" no terminal.</p>
         </section>
 
+        <!-- Submódulo 2: Programas Básicos -->
         <section>
-            <h2>2. Programas Básicos</h2>
-            <h3>Fatorial</h3>
+            <h2>Submódulo 2: Programas Básicos</h2>
+
+            <h3>Cálculo do Fatorial</h3>
             <pre><code>
 // Cálculo do fatorial em Go
 package main
@@ -109,9 +54,9 @@ func main() {
     fmt.Println("Fatorial de 5 é:", fatorial(5))
 }
             </code></pre>
-            <p><strong>Explicação:</strong> Esta função calcula o fatorial de um número de forma recursiva. Se o número for 0, retorna 1. Caso contrário, multiplica o número pelo fatorial do número anterior até chegar a 1.</p>
+            <p><strong>Explicação:</strong> Este programa calcula o fatorial de um número usando uma função recursiva. A função <code>fatorial()</code> retorna 1 quando <code>n</code> é zero, e para outros valores de <code>n</code>, calcula o produto de <code>n</code> por <code>fatorial(n-1)</code>.</p>
 
-            <h3>Número Primo</h3>
+            <h3>Verificação de Número Primo</h3>
             <pre><code>
 // Verificar se um número é primo
 package main
@@ -134,7 +79,7 @@ func main() {
     fmt.Println("7 é primo?", isPrimo(7))
 }
             </code></pre>
-            <p><strong>Explicação:</strong> Este código verifica se um número é primo. A função <code>isPrimo()</code> percorre os números de 2 até o número dado e retorna <code>false</code> se encontrar um divisor. Se não houver divisores, retorna <code>true</code>.</p>
+            <p><strong>Explicação:</strong> A função <code>isPrimo()</code> verifica se um número é primo. Ela retorna <code>false</code> se o número tiver divisores entre 2 e <code>n-1</code> e <code>true</code> se não tiver divisores.</p>
 
             <h3>Vetores e Matrizes</h3>
             <pre><code>
@@ -148,49 +93,13 @@ func main() {
     fmt.Println("Vetor:", vetor)
 }
             </code></pre>
-            <p><strong>Explicação:</strong> O código demonstra como declarar um vetor em Go e acessar seus elementos. Aqui, um vetor de 5 inteiros é declarado e seus valores são impressos usando <code>fmt.Println()</code>.</p>
-
-            <h3>Trabalhando com Arquivos</h3>
-            <pre><code>
-// Criar e ler arquivos
-package main
-
-import (
-    "fmt"
-    "os"
-)
-
-func main() {
-    // Criar arquivo
-    arquivo, err := os.Create("exemplo.txt")
-    if err != nil {
-        fmt.Println("Erro ao criar o arquivo:", err)
-        return
-    }
-    defer arquivo.Close()
-
-    // Escrever no arquivo
-    _, err = arquivo.WriteString("Olá, Go Lang!")
-    if err != nil {
-        fmt.Println("Erro ao escrever no arquivo:", err)
-        return
-    }
-    fmt.Println("Arquivo criado e texto gravado.")
-
-    // Ler o arquivo
-    dados, err := os.ReadFile("exemplo.txt")
-    if err != nil {
-        fmt.Println("Erro ao ler o arquivo:", err)
-        return
-    }
-    fmt.Println("Conteúdo do arquivo:", string(dados))
-}
-            </code></pre>
-            <p><strong>Explicação:</strong> Este código demonstra como criar e ler arquivos em Go. O arquivo "exemplo.txt" é criado, uma string é gravada nele e depois lida. Funções como <code>os.Create()</code> e <code>os.ReadFile()</code> são usadas para manipulação de arquivos.</p>
+            <p><strong>Explicação:</strong> Este código demonstra a criação de um vetor de inteiros em Go e exibe os valores do vetor usando <code>fmt.Println()</code>.</p>
         </section>
 
+        <!-- Submódulo 3: Algoritmos de Busca e Ordenação -->
         <section>
-            <h2>3. Algoritmos de Busca e Ordenação</h2>
+            <h2>Submódulo 3: Algoritmos de Busca e Ordenação</h2>
+
             <h3>Busca Binária</h3>
             <pre><code>
 // Implementação da busca binária
@@ -223,7 +132,7 @@ func main() {
     }
 }
             </code></pre>
-            <p><strong>Explicação:</strong> A busca binária procura um elemento em uma lista ordenada, dividindo o intervalo de pesquisa pela metade a cada iteração. O código retorna a posição do elemento se encontrado ou <code>-1</code> se não estiver presente.</p>
+            <p><strong>Explicação:</strong> A função <code>buscaBinaria()</code> implementa a busca binária para localizar um número em uma lista ordenada. Ela divide a lista pela metade em cada passo, reduzindo o tempo de pesquisa em comparação com a busca linear.</p>
 
             <h3>Ordenação por Inserção</h3>
             <pre><code>
@@ -250,7 +159,7 @@ func main() {
     fmt.Println("Vetor ordenado:", vetor)
 }
             </code></pre>
-            <p><strong>Explicação:</strong> A ordenação por inserção percorre o vetor e insere cada elemento na sua posição correta em uma sublista crescente. O código reorganiza os elementos diretamente no vetor, sem a necessidade de uma estrutura adicional.</p>
+            <p><strong>Explicação:</strong> A função <code>ordenacaoPorInsercao()</code> reorganiza os elementos no vetor por meio de uma sequência de inserções. Esse método é eficiente para listas pequenas e funciona movendo elementos maiores para a direita.</p>
         </section>
     </div>
 
