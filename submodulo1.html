@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submódulo 1 - Sistema Operacional Inferno e Linguagem Go</title>
+    <title>Submódulo 1 - Introdução ao Go e Sistema Inferno</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Estilo global para garantir fundo escuro */
@@ -49,36 +49,78 @@
 </head>
 <body>
     <header>
-        <h1>Submódulo 1 - Sistema Operacional Inferno e Linguagem Go</h1>
-        <h3>Entenda o Sistema Inferno e como ele influenciou a linguagem Go</h3>
+        <h1>Submódulo 1 - Introdução ao Go e Sistema Inferno</h1>
+        <h3>Aprenda os Fundamentos da Programação Go e a Programação do Sistema Inferno</h3>
     </header>
 
     <div class="content">
-        <h2>O que é o Sistema Operacional Inferno?</h2>
-        <p>O **Sistema Operacional Inferno** foi criado nos **Bell Labs** durante os anos 90, como uma solução minimalista, modular e de alto desempenho para computação em rede e dispositivos embarcados. Seu design visava ser eficiente e simples, ao mesmo tempo que oferecia flexibilidade para suportar novos dispositivos e interações em rede.</p>
+        <h2>O que é Go (Golang)?</h2>
+        <p>Go, também conhecido como Golang, é uma linguagem de programação desenvolvida pelo Google. Ela foi projetada para ser simples, eficiente e segura, com suporte a concorrência e paralelismo nativo. É uma linguagem que tem ganhado popularidade no desenvolvimento de sistemas, servidores web e outras aplicações de alto desempenho.</p>
         
-        <h3>Características Principais do Inferno:</h3>
+        <h3>Principais Características do Go:</h3>
         <ul>
-            <li><strong>Modularidade:</strong> A arquitetura do Inferno era modular, permitindo que diferentes partes do sistema fossem facilmente substituídas ou modificadas, sem comprometer a estrutura geral.</li>
-            <li><strong>Linguagem Limbo:</strong> O Inferno foi desenvolvido com a linguagem de programação **Limbo**, que foi criada para interagir diretamente com o sistema operacional, de forma simples e eficiente. Limbo compartilhava conceitos de tipagem forte e concorrência, como Go, mas com foco no ambiente do Inferno.</li>
-            <li><strong>Foco em Redes:</strong> O Inferno foi projetado com uma forte ênfase em conectividade em rede. Isso o tornava ideal para ambientes distribuídos, como sistemas embarcados ou servidores com múltiplos dispositivos conectados.</li>
-            <li><strong>Interface Simples:</strong> A interface gráfica do Inferno era simples e focada na interação direta com o usuário, tornando-o acessível tanto para programadores quanto para administradores de sistemas.</li>
-            <li><strong>Estrutura de "Divisão e Conquista":</strong> O Inferno utilizava uma abordagem de "divisão e conquista", onde as tarefas eram divididas em unidades pequenas e independentes que podiam ser gerenciadas e paralelizadas de maneira mais eficaz.</li>
+            <li><strong>Concorrência com Goroutines:</strong> O Go possui uma abstração chamada goroutines para facilitar a execução de múltiplos processos simultaneamente.</li>
+            <li><strong>Simplicidade:</strong> O Go foi projetado para ser simples e direto, com sintaxe clara e concisa.</li>
+            <li><strong>Compilação Rápida:</strong> A linguagem é extremamente rápida na hora de compilar, tornando o ciclo de desenvolvimento mais eficiente.</li>
         </ul>
 
-        <h3>Como o Go se Relaciona com o Inferno?</h3>
-        <p>A linguagem **Go** foi desenvolvida no Google com o objetivo de melhorar o desempenho e a simplicidade da programação, especialmente em ambientes de alta concorrência. Embora o Go não tenha sido diretamente inspirado pelo Inferno, ele compartilha alguns conceitos fundamentais:</p>
+        <h2>Exemplo de Código: Programa Simples em Go</h2>
+        <p>Abaixo, temos um exemplo simples de um programa Go que imprime "Olá, Mundo!" no console:</p>
         
+        <pre><code>
+// Programa simples em Go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Olá, Mundo!")
+}
+        </code></pre>
+
+        <h3>Explicação do Código:</h3>
         <ul>
-            <li><strong>Concorrência:</strong> Assim como o Inferno com sua arquitetura modular e concorrência em Limbo, o Go também tem suporte nativo a concorrência por meio das goroutines, que permitem a execução de múltiplos processos simultâneos de forma eficiente.</li>
-            <li><strong>Simplicidade e Modularidade:</strong> O Go e o Inferno têm em comum a busca por simplicidade e modularidade. Ambos buscam criar sistemas que sejam fáceis de entender, modificar e escalar.</li>
-            <li><strong>Rede e Comunicação:</strong> O foco do Inferno em sistemas distribuídos e conectados é refletido no Go, que também foi projetado para ser altamente eficiente em sistemas de rede e servidores web.</li>
+            <li><code>package main</code>: Define que este código pertence ao pacote principal do programa.</li>
+            <li><code>import "fmt"</code>: Importa o pacote "fmt", que é utilizado para formatação de entrada e saída de dados (como imprimir no console).</li>
+            <li><code>func main()</code>: A função <code>main</code> é o ponto de entrada do programa, onde a execução começa.</li>
+            <li><code>fmt.Println("Olá, Mundo!")</code>: Imprime a mensagem "Olá, Mundo!" no console.</li>
+        </ul>
+
+        <h2>O Sistema Operacional Inferno</h2>
+        <p>O **Sistema Operacional Inferno** foi desenvolvido nos anos 90 na empresa Bell Labs. Ele é um sistema operacional modular e minimalista, inspirado na ideia de ser simples, flexível e eficiente. Ele foi projetado para suportar a execução de sistemas embarcados e servidores, mas também foi uma experiência para testar novos conceitos de computação e design de sistemas.</p>
+
+        <h3>Características do Inferno:</h3>
+        <ul>
+            <li><strong>Modularidade:</strong> O Inferno adota uma arquitetura extremamente modular, onde os sistemas e serviços são tratados como objetos que se comunicam entre si.</li>
+            <li><strong>Foco em Redes:</strong> Foi desenvolvido com um forte foco em computação em rede e suporte a diversos dispositivos conectados.</li>
+            <li><strong>Lingua de Programação Limbo:</strong> O Inferno é complementado pela linguagem Limbo, que foi criada para interagir com o sistema operacional. Limbo possui semelhanças com o Go, como tipagem forte e concorrência.</li>
+            <li><strong>Interface Simples:</strong> O Inferno utiliza uma interface gráfica simples e uma abordagem de interação com o usuário muito focada em simplicidade.</li>
+        </ul>
+
+        <h3>Como o Go e o Inferno se Relacionam?</h3>
+        <p>A linguagem **Go** foi, de certa forma, inspirada em várias ideias do sistema **Inferno**, especialmente na área de concorrência e desempenho. Além disso, a ideia de simplicidade e modularidade que permeia o design do Inferno influenciou a criação do Go.</p>
+
+        <h2>Exemplo de Código: Programa Simples em Limbo</h2>
+        <p>Abaixo temos um exemplo de código em Limbo, a linguagem associada ao sistema operacional Inferno. Esse exemplo imprime uma mensagem na tela, similar ao exemplo em Go.</p>
+
+        <pre><code>
+# Programa simples em Limbo
+main := proc() {
+    put("Olá, Inferno!\n")
+};
+main()
+        </code></pre>
+
+        <h3>Explicação do Código em Limbo:</h3>
+        <ul>
+            <li><code>main := proc() {...}</code>: Define uma função <code>main</code> que será o ponto de entrada do programa.</li>
+            <li><code>put("Olá, Inferno!\n")</code>: Imprime a mensagem "Olá, Inferno!" na tela.</li>
         </ul>
 
         <h2>Conclusão</h2>
-        <p>O **Inferno** foi um sistema inovador que buscava simplicidade e flexibilidade através de sua arquitetura modular e foco em redes. Embora tenha sido desenvolvido com a linguagem Limbo, muitos de seus princípios influenciaram a criação de Go, uma linguagem moderna com foco em desempenho e concorrência. Ambos os sistemas destacam a importância de se criar plataformas eficientes, simples e escaláveis, sendo o Inferno uma experiência valiosa para o desenvolvimento de sistemas operacionais modernos e o Go uma linguagem que se beneficiou dessa filosofia.</p>
+        <p>O Go é uma linguagem moderna que reflete a busca por simplicidade e eficiência, características também presentes no sistema operacional Inferno. Ambos são exemplos de como boas práticas de design e modularidade podem resultar em sistemas poderosos e fáceis de entender.</p>
 
-        <p>Agora que você entendeu os conceitos principais por trás do **Inferno** e a maneira como a linguagem **Go** evoluiu a partir desses conceitos, você está pronto para explorar mais sobre como Go pode ser utilizado para criar sistemas modernos e de alto desempenho.</p>
+        <p>Agora que você tem uma introdução básica à programação em Go e ao sistema Inferno, está pronto para começar a explorar mais profundamente ambos os tópicos e entender como eles podem ser aplicados em sistemas reais.</p>
     </div>
 
     <footer>
