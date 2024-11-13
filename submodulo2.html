@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submódulo 2 - Programas Básicos em Go Lang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilo global para garantir fundo escuro */
+        body {
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos específicos para o conteúdo do submódulo */
+        .content {
+            width: 80%;
+            margin: auto;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1, h2, h3 {
+            color: #00aaff;
+            text-align: center;
+        }
+        p {
+            margin: 15px 0;
+        }
+        ul {
+            margin: 15px;
+            padding-left: 20px;
+        }
+        pre code {
+            display: block;
+            background: #2d2d2d;
+            border: 1px solid #444;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #c5c5c5;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Submódulo 2 - Programas Básicos em Go Lang</h1>
+        <h3>Fatorial, Número Primo, Vetores e Matrizes</h3>
+    </header>
+
+    <div class="content">
+        <h2>Programa 1 - Cálculo do Fatorial</h2>
+        <p>O fatorial de um número é o produto de todos os números inteiros positivos até ele. Por exemplo, o fatorial de 5 é 120 (5 * 4 * 3 * 2 * 1).</p>
+        
+        <pre><code>
+// Programa para calcular o fatorial de um número
+package main
+
+import "fmt"
+
+func fatorial(n int) int {
+    if n == 0 {
+        return 1
+    }
+    return n * fatorial(n-1)
+}
+
+func main() {
+    numero := 5
+    fmt.Printf("O fatorial de %d é %d\n", numero, fatorial(numero))
+}
+        </code></pre>
+
+        <h3>Explicação do Código:</h3>
+        <ul>
+            <li><code>func fatorial(n int) int</code>: Define uma função recursiva que calcula o fatorial de um número.</li>
+            <li><code>numero := 5</code>: Define o número para o qual queremos calcular o fatorial.</li>
+            <li><code>fmt.Printf</code>: Exibe o resultado formatado no console.</li>
+        </ul>
+
+        <h2>Programa 2 - Verificação de Número Primo</h2>
+        <p>Um número primo é divisível apenas por 1 e por ele mesmo. Neste programa, verificamos se um número é primo.</p>
+        
+        <pre><code>
+// Programa para verificar se um número é primo
+package main
+
+import "fmt"
+
+func ehPrimo(n int) bool {
+    if n <= 1 {
+        return false
+    }
+    for i := 2; i*i <= n; i++ {
+        if n%i == 0 {
+            return false
+        }
+    }
+    return true
+}
+
+func main() {
+    numero := 7
+    if ehPrimo(numero) {
+        fmt.Printf("%d é um número primo\n", numero)
+    } else {
+        fmt.Printf("%d não é um número primo\n", numero)
+    }
+}
+        </code></pre>
+
+        <h3>Explicação do Código:</h3>
+        <ul>
+            <li><code>func ehPrimo(n int) bool</code>: Função que retorna verdadeiro se o número for primo e falso caso contrário.</li>
+            <li><code>for i := 2; i*i &lt;= n</code>: Checa divisores até a raiz quadrada do número para otimizar o cálculo.</li>
+        </ul>
+
+        <h2>Programa 3 - Manipulação de Vetores</h2>
+        <p>Vetores são listas de elementos do mesmo tipo. Aqui, vamos iterar sobre um vetor e calcular a soma dos elementos.</p>
+        
+        <pre><code>
+// Programa para calcular a soma dos elementos de um vetor
+package main
+
+import "fmt"
+
+func main() {
+    numeros := []int{1, 2, 3, 4, 5}
+    soma := 0
+
+    for _, numero := range numeros {
+        soma += numero
+    }
+
+    fmt.Printf("A soma dos elementos é %d\n", soma)
+}
+        </code></pre>
+
+        <h3>Explicação do Código:</h3>
+        <ul>
+            <li><code>numeros := []int{1, 2, 3, 4, 5}</code>: Declara um vetor de inteiros com 5 elementos.</li>
+            <li><code>for _, numero := range numeros</code>: Itera sobre cada elemento do vetor e adiciona à soma total.</li>
+        </ul>
+
+        <h2>Programa 4 - Manipulação de Matrizes</h2>
+        <p>Matrizes são listas de listas, permitindo armazenar dados em duas dimensões. Este programa exibe os elementos de uma matriz 2x2.</p>
+        
+        <pre><code>
+// Programa para exibir os elementos de uma matriz 2x2
+package main
+
+import "fmt"
+
+func main() {
+    matriz := [2][2]int{{1, 2}, {3, 4}}
+
+    for i := 0; i < 2; i++ {
+        for j := 0; j < 2; j++ {
+            fmt.Printf("%d ", matriz[i][j])
+        }
+        fmt.Println()
+    }
+}
+        </code></pre>
+
+        <h3>Explicação do Código:</h3>
+        <ul>
+            <li><code>matriz := [2][2]int{{1, 2}, {3, 4}}</code>: Declara uma matriz 2x2 com valores inteiros.</li>
+            <li><code>for i := 0; i &lt; 2; i++</code>: Itera sobre as linhas e colunas da matriz para exibir os valores.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CodePythonClub. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
