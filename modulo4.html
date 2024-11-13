@@ -29,6 +29,24 @@
             color: #00aaff;
             text-align: center;
         }
+        .submodule-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .submodule-nav a {
+            background-color: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .submodule-nav a:hover {
+            background-color: #008fcc;
+        }
         pre code {
             display: block;
             background: #2d2d2d;
@@ -58,9 +76,16 @@
         <h3>Aprenda os fundamentos da linguagem Go</h3>
     </header>
 
+    <!-- Navegação entre submódulos -->
+    <div class="submodule-nav">
+        <a href="#submodulo1">Submódulo 1: Introdução ao Go Lang</a>
+        <a href="#submodulo2">Submódulo 2: Programas Básicos</a>
+        <a href="#submodulo3">Submódulo 3: Algoritmos de Busca e Ordenação</a>
+    </div>
+
     <div class="container">
         <!-- Submódulo 1: Introdução ao Go Lang -->
-        <section>
+        <section id="submodulo1">
             <h2>Submódulo 1: Introdução ao Go Lang</h2>
             <p>Go, também conhecida como Golang, é uma linguagem de programação open-source criada pela Google. Nesta seção, aprenderemos conceitos básicos de Go e daremos os primeiros passos com a linguagem.</p>
 
@@ -79,7 +104,7 @@ func main() {
         </section>
 
         <!-- Submódulo 2: Programas Básicos -->
-        <section>
+        <section id="submodulo2">
             <h2>Submódulo 2: Programas Básicos</h2>
 
             <h3>Cálculo do Fatorial</h3>
@@ -100,50 +125,11 @@ func main() {
     fmt.Println("Fatorial de 5 é:", fatorial(5))
 }
             </code></pre>
-            <p><strong>Explicação:</strong> Este programa calcula o fatorial de um número usando uma função recursiva. A função <code>fatorial()</code> retorna 1 quando <code>n</code> é zero, e para outros valores de <code>n</code>, calcula o produto de <code>n</code> por <code>fatorial(n-1)</code>.</p>
-
-            <h3>Verificação de Número Primo</h3>
-            <pre><code>
-// Verificar se um número é primo
-package main
-
-import "fmt"
-
-func isPrimo(n int) bool {
-    if n <= 1 {
-        return false
-    }
-    for i := 2; i < n; i++ {
-        if n%i == 0 {
-            return false
-        }
-    }
-    return true
-}
-
-func main() {
-    fmt.Println("7 é primo?", isPrimo(7))
-}
-            </code></pre>
-            <p><strong>Explicação:</strong> A função <code>isPrimo()</code> verifica se um número é primo. Ela retorna <code>false</code> se o número tiver divisores entre 2 e <code>n-1</code> e <code>true</code> se não tiver divisores.</p>
-
-            <h3>Vetores e Matrizes</h3>
-            <pre><code>
-// Uso de vetores em Go
-package main
-
-import "fmt"
-
-func main() {
-    var vetor = [5]int{1, 2, 3, 4, 5}
-    fmt.Println("Vetor:", vetor)
-}
-            </code></pre>
-            <p><strong>Explicação:</strong> Este código demonstra a criação de um vetor de inteiros em Go e exibe os valores do vetor usando <code>fmt.Println()</code>.</p>
+            <p><strong>Explicação:</strong> Este programa calcula o fatorial de um número usando uma função recursiva.</p>
         </section>
 
         <!-- Submódulo 3: Algoritmos de Busca e Ordenação -->
-        <section>
+        <section id="submodulo3">
             <h2>Submódulo 3: Algoritmos de Busca e Ordenação</h2>
 
             <h3>Busca Binária</h3>
@@ -178,34 +164,7 @@ func main() {
     }
 }
             </code></pre>
-            <p><strong>Explicação:</strong> A função <code>buscaBinaria()</code> implementa a busca binária para localizar um número em uma lista ordenada. Ela divide a lista pela metade em cada passo, reduzindo o tempo de pesquisa em comparação com a busca linear.</p>
-
-            <h3>Ordenação por Inserção</h3>
-            <pre><code>
-// Implementação de ordenação por inserção
-package main
-
-import "fmt"
-
-func ordenacaoPorInsercao(vetor []int) {
-    for i := 1; i < len(vetor); i++ {
-        chave := vetor[i]
-        j := i - 1
-        for j >= 0 && vetor[j] > chave {
-            vetor[j+1] = vetor[j]
-            j = j - 1
-        }
-        vetor[j+1] = chave
-    }
-}
-
-func main() {
-    vetor := []int{29, 10, 14, 37, 14}
-    ordenacaoPorInsercao(vetor)
-    fmt.Println("Vetor ordenado:", vetor)
-}
-            </code></pre>
-            <p><strong>Explicação:</strong> A função <code>ordenacaoPorInsercao()</code> reorganiza os elementos no vetor por meio de uma sequência de inserções. Esse método é eficiente para listas pequenas e funciona movendo elementos maiores para a direita.</p>
+            <p><strong>Explicação:</strong> A função <code>buscaBinaria()</code> implementa a busca binária para localizar um número em uma lista ordenada.</p>
         </section>
     </div>
 
